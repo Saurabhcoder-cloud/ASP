@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #0B0F14; /* Deep space base - premium focus */
+    --color-foreground: #FFFFFF; /* Maximum readability */
+    --color-border: #2A3441; /* Subtle separation */
+    --color-input: #1A1F26; /* Form field background */
+    --color-ring: #00E6C3; /* Focus indicator - electric teal */
+    
+    /* Card System */
+    --color-card: #1A1F26; /* Content elevation */
+    --color-card-foreground: #FFFFFF; /* Card text */
+    
+    /* Popover System */
+    --color-popover: #1A1F26; /* Overlay background */
+    --color-popover-foreground: #FFFFFF; /* Overlay text */
+    
+    /* Muted System */
+    --color-muted: #2A3441; /* Subtle backgrounds */
+    --color-muted-foreground: #A0A9B8; /* Supporting information */
+    
+    /* Brand Primary */
+    --color-primary: #00E6C3; /* Innovation energy - electric teal */
+    --color-primary-foreground: #0B0F14; /* Dark text on teal */
+    
+    /* Brand Secondary */
+    --color-secondary: #8B6EF6; /* AI sophistication - violet */
+    --color-secondary-foreground: #FFFFFF; /* White text on violet */
+    
+    /* Status Colors */
+    --color-destructive: #FF6B6B; /* Error state - coral red */
+    --color-destructive-foreground: #FFFFFF; /* White text on red */
+    
+    --color-accent: #FFB86B; /* Success metrics - warm amber */
+    --color-accent-foreground: #0B0F14; /* Dark text on amber */
+    
+    --color-success: #00E6C3; /* Positive confirmation - electric teal */
+    --color-success-foreground: #0B0F14; /* Dark text on success */
+    
+    --color-warning: #FFB86B; /* Important notices - warm amber */
+    --color-warning-foreground: #0B0F14; /* Dark text on warning */
+    
+    --color-error: #FF6B6B; /* Error feedback - coral red */
+    --color-error-foreground: #FFFFFF; /* White text on error */
+    
+    /* Surface System */
+    --color-surface: #1A1F26; /* Interface structure - elevated dark */
+    --color-surface-foreground: #FFFFFF; /* Surface text */
+    
+    /* Text Hierarchy */
+    --color-text-primary: #FFFFFF; /* Primary content - white */
+    --color-text-secondary: #A0A9B8; /* Secondary content - muted gray */
+    --color-text-tertiary: #6B7280; /* Tertiary content - gray-500 */
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Typography System */
+  .font-display {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+  }
+  
+  .font-heading {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+  }
+  
+  .font-medium {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    font-weight: 400;
+  }
+  
+  /* Constellation Animation Keyframes */
+  @keyframes constellation-pulse {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes orbital-rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes electric-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  @keyframes magnetic-hover {
+    0% {
+      transform: scale(1) translateY(0);
+    }
+    100% {
+      transform: scale(1.05) translateY(-2px);
+    }
+  }
+  
+  /* Custom Utility Classes */
+  .constellation-glow {
+    box-shadow: 0 0 20px rgba(0, 230, 195, 0.3);
+  }
+  
+  .glassmorphism {
+    backdrop-filter: blur(10px);
+    background: rgba(26, 31, 38, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .electric-gradient {
+    background: linear-gradient(90deg, #00E6C3, #8B6EF6);
+    background-size: 200% 100%;
+    animation: electric-flow 3s ease-in-out infinite;
+  }
+  
+  .orbital-card {
+    transition: all 0.3s ease-out;
+  }
+  
+  .orbital-card:hover {
+    transform: rotateY(5deg) translateZ(20px);
+  }
+  
+  .magnetic-cta {
+    transition: all 0.3s ease-out;
+  }
+  
+  .magnetic-cta:hover {
+    animation: magnetic-hover 0.3s ease-out forwards;
+    box-shadow: 0 8px 32px rgba(0, 230, 195, 0.4);
+  }
+}
