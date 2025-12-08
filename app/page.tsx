@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
-import HomepageInteractive from './components/HomepageInteractive';
+import HomepageInteractive from './homepage/components/HomepageInteractive';
 
 export const metadata: Metadata = {
   title: 'Homepage - ASP Global Solutions',

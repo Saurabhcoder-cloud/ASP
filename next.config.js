@@ -1,23 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ✅ ALLOW YOUR LOGO URL HERE
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "occasional-moccasin-msnnhl2fjq.edgeone.app",
+        protocol: 'https',
+        hostname: 'occasional-moccasin-msnnhl2fjq.edgeone.app',
       },
     ],
-  },
-
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/services',
-        permanent: false,
-      },
-    ];
   },
 
   webpack(config) {
@@ -34,4 +23,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

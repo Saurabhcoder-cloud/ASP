@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/index.css';
+import './globals.css';
 
 export const viewport = {
   width: 'device-width',
